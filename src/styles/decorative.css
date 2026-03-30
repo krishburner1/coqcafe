@@ -1,0 +1,139 @@
+/* Decorative patterns and enhancements for Coquettes Café */
+
+/* Subtle floral background pattern for certain sections */
+.floral-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(248, 200, 220, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(216, 140, 163, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(198, 167, 94, 0.02) 0%, transparent 50%);
+}
+
+/* Soft ribbon divider effect */
+.ribbon-divider {
+  position: relative;
+}
+
+.ribbon-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #C6A75E, transparent);
+  border-radius: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+button, a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Soft shadow for cards */
+.soft-shadow {
+  box-shadow: 0 4px 20px rgba(216, 140, 163, 0.1);
+}
+
+.soft-shadow:hover {
+  box-shadow: 0 8px 30px rgba(216, 140, 163, 0.2);
+}
+
+/* Romantic gradient overlay */
+.romantic-gradient {
+  background: linear-gradient(135deg, #F8C8DC 0%, #D88CA3 50%, #A84A6E 100%);
+}
+
+/* Lace-like border effect */
+.lace-border {
+  border: 1px solid rgba(216, 140, 163, 0.2);
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 2px 8px rgba(216, 140, 163, 0.1);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #F8C8DC, #D88CA3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #D88CA3, #A84A6E);
+}
+
+/* Selection styling */
+::selection {
+  background: #F8C8DC;
+  color: #4A4A4A;
+}
+
+::-moz-selection {
+  background: #F8C8DC;
+  color: #4A4A4A;
+}
+
+/* Subtle floating animation for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Shimmer effect for special elements */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}

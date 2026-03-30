@@ -1,0 +1,153 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Coquettes Café Color Palette */
+  --blush-pink: #F8C8DC;
+  --dusty-rose: #D88CA3;
+  --cream: #FFF6EC;
+  --soft-sage: #B8C9B1;
+  --pearl-white: #FAF9F6;
+  --muted-gold: #C6A75E;
+  --deep-rose: #A84A6E;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-heading-alt: 'Cormorant Garamond', serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-body-alt: 'Montserrat', sans-serif;
+  --font-accent: 'Parisienne', cursive;
+
+  /* Theme Variables */
+  --font-size: 16px;
+  --background: #FAF9F6;
+  --foreground: #4A4A4A;
+  --card: #ffffff;
+  --card-foreground: #4A4A4A;
+  --popover: #ffffff;
+  --popover-foreground: #4A4A4A;
+  --primary: #F8C8DC;
+  --primary-foreground: #4A4A4A;
+  --secondary: #D88CA3;
+  --secondary-foreground: #ffffff;
+  --muted: #FFF6EC;
+  --muted-foreground: #717182;
+  --accent: #C6A75E;
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(216, 140, 163, 0.2);
+  --input: transparent;
+  --input-background: #FFF6EC;
+  --switch-background: #D88CA3;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #F8C8DC;
+  --radius: 0.875rem;
+  --sidebar: #FAF9F6;
+  --sidebar-foreground: #4A4A4A;
+  --sidebar-primary: #F8C8DC;
+  --sidebar-primary-foreground: #4A4A4A;
+  --sidebar-accent: #FFF6EC;
+  --sidebar-accent-foreground: #4A4A4A;
+  --sidebar-border: rgba(216, 140, 163, 0.2);
+  --sidebar-ring: #F8C8DC;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom colors for direct use */
+  --color-blush-pink: var(--blush-pink);
+  --color-dusty-rose: var(--dusty-rose);
+  --color-cream: var(--cream);
+  --color-soft-sage: var(--soft-sage);
+  --color-pearl-white: var(--pearl-white);
+  --color-muted-gold: var(--muted-gold);
+  --color-deep-rose: var(--deep-rose);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+  }
+
+  h1 {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input, textarea, select {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
